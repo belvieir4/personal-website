@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'metropolis';
+  font-family: 'Metropolis';
   src: url('/public/fonts/Metropolis-Light.woff') format('woff'),
        url('/public/fonts/Metropolis-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: light;
 }
 @font-face {
-  font-family: 'metropolis';
+  font-family: 'Metropolis';
   src: url('/public/fonts/Metropolis-Bold.woff') format('woff'),
        url('/public/fonts/Metropolis-Bold.woff2') format('woff2');
   font-weight: 700;
@@ -18,5 +18,5 @@
 }
 
 body{
-  @apply bg-gray-950;
+  @apply bg-gray-950 pt-16;
 }

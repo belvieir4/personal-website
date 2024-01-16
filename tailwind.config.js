@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['metropolis', 'sans-serif', ...defaultTheme.fontFamily.sans],
+        sans: ['Metropolis', 'sans-serif', ...defaultTheme.fontFamily.sans],
       },
     },
   },
