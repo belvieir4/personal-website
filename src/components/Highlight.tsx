@@ -10,6 +10,7 @@ export type HighlightProps = {
   reverse?: boolean;
   to: LinkProps['to'];
   tags: string[];
+  className?: string;
 };
 
 const Highlight = ({
@@ -19,6 +20,7 @@ const Highlight = ({
   reverse,
   to,
   tags,
+  className,
 }: HighlightProps) => {
   return (
     <div
@@ -27,13 +29,14 @@ const Highlight = ({
         {
           'lg:flex-row-reverse': reverse,
         },
+        className,
       )}
     >
       <img
-        className="h-72 w-full rounded-[16px] object-cover md:h-64 md:w-[420px] lg:h-[320px] lg:w-[520px] xl:h-[400px] xl:w-[624px]"
+        className="h-72 w-full rounded-[16px] object-cover md:h-52 md:w-[328px] lg:h-[320px] lg:w-[520px] xl:h-[400px] xl:w-[624px]"
         src={img}
       />
-      <div className="flex w-full flex-col items-start md:w-[420px] lg:w-[624px]">
+      <div className="flex w-full flex-col items-start md:w-[328px] lg:w-[624px]">
         <div className="mb-6 flex gap-3">
           {tags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>

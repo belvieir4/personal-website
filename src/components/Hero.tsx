@@ -18,7 +18,7 @@ const Hero = ({ title, subtitle, tags }: HeroProps) => {
       <p className=" mt-2 text-center font-light text-white  lg:text-xl">
         {subtitle}
       </p>
-      <hr className="mt-14 w-40 rounded-sm border-2 border-cyan-400 lg:mt-20" />
+      <hr className="mt-14 w-40 rounded-sm border-2 border-teal-400 lg:mt-20" />
     </div>
   );
 };
