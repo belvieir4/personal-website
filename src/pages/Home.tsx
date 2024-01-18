@@ -5,6 +5,7 @@ import Card from 'components/Card';
 import ThumbDigimonList from 'pages/projects/frontprojects/imgs/thumb-digimonlist.jpg';
 import ThumbPersonalWebsite from 'pages/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
 import ThumbSimpleLogin from 'pages/projects/frontprojects/imgs/thumb-simplelogin.jpg';
+import PersonalPhoto from 'assets/personal-photo.png';
 
 const Home = () => {
   return (
@@ -98,9 +99,40 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Project Secondary Grid */}
-      <div className="flex w-full flex-col items-center">
+      {/* About me section */}
+      <div className="flex w-full flex-col items-center px-4">
         <hr className="mb-20 w-40 rounded-sm border-2 border-teal-400 lg:mt-20" />
+        <img
+          src={PersonalPhoto}
+          alt="Photo in black and white of Isabel Vieira"
+        />
+        <div className="mb-20 mt-8 flex max-w-[560px] flex-col items-center">
+          <h3 className="text-3xl font-bold text-white">About me</h3>
+          <p className="mt-8 text-center text-white">
+            I have more than 10 years of experience with technology, working
+            with web and mobile applications for B2B and B2C companies,
+            including fintechs, HR systems, banks and gaming.
+          </p>
+          <p className="mt-6 text-center text-white">
+            You can{' '}
+            <a
+              href="https://www.linkedin.com/in/isabelcvieira/"
+              target="_blank"
+              className="text-teal-400 hover:underline hover:underline-offset-4"
+            >
+              reach me on LinkedIn
+            </a>{' '}
+            or{' '}
+            <a
+              href="mailto:work.isabelvieira@gmail.com"
+              target="_blank"
+              className="text-teal-400 hover:underline hover:underline-offset-4"
+            >
+              send me an e-mail
+            </a>
+            .
+          </p>
+        </div>
       </div>
     </>
   );

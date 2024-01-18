@@ -6,7 +6,7 @@ function Footer() {
         <a
           href="https://www.linkedin.com/in/isabelcvieira/"
           target="_blank"
-          className="hover:un text-teal-400 hover:underline hover:underline-offset-4"
+          className="text-teal-400 hover:underline hover:underline-offset-4"
         >
           Isabel Vieira
         </a>{' '}
