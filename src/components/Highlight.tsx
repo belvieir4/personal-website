@@ -33,7 +33,7 @@ const Highlight = ({
       )}
     >
       <img
-        className="h-72 w-full rounded-[16px] object-cover md:h-52 md:w-[328px] lg:h-[320px] lg:w-[520px] xl:h-[400px] xl:w-[624px]"
+        className="h-72 w-full rounded-2xl object-cover md:h-52 md:w-[328px] lg:h-[320px] lg:w-[520px] xl:h-[400px] xl:w-[624px]"
         src={img}
       />
       <div className="flex w-full flex-col items-start md:w-[328px] lg:w-[624px]">

@@ -33,7 +33,7 @@ const Home = () => {
             img="https://picsum.photos/1400/800"
             title="Test"
             subtitle="Test"
-            to="/project/02"
+            to="/project/ebanx"
             tags={['Product Design', 'Mobile App']}
             reverse
             className="md:w-auto"
@@ -42,7 +42,7 @@ const Home = () => {
             img="https://picsum.photos/1400/800"
             title="Test"
             subtitle="Test"
-            to="/project/02"
+            to="/project/ebanx"
             tags={['Product Design', 'Mobile App']}
             className="md:w-auto"
           />
@@ -50,11 +50,11 @@ const Home = () => {
       </div>
 
       {/* Project Secondary Grid */}
-      <div className="mt-32 flex w-full flex-col items-center">
+      <div className="mt-20 flex w-full flex-col items-center xl:mt-32">
         <h2 className="mb-10 text-center text-4xl font-bold text-white">
           Other Projects
         </h2>
-        <div className="mb-20 mt-10 grid w-full grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-6">
+        <div className="mt-10 grid w-full grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-6">
           <Card
             title="Personal Website"
             img={ThumbPersonalWebsite}
@@ -101,19 +101,19 @@ const Home = () => {
 
       {/* About me section */}
       <div className="flex w-full flex-col items-center px-4">
-        <hr className="mb-20 w-40 rounded-sm border-2 border-teal-400 lg:mt-20" />
+        <hr className="mb-20 mt-20 w-40 rounded-sm border-2 border-teal-400 lg:mt-32" />
         <img
           src={PersonalPhoto}
           alt="Photo in black and white of Isabel Vieira"
         />
         <div className="mb-20 mt-8 flex max-w-[560px] flex-col items-center">
           <h3 className="text-3xl font-bold text-white">About me</h3>
-          <p className="mt-8 text-center text-white">
+          <p className="mt-8 text-center leading-7 text-white">
             I have more than 10 years of experience with technology, working
             with web and mobile applications for B2B and B2C companies,
             including fintechs, HR systems, banks and gaming.
           </p>
-          <p className="mt-6 text-center text-white">
+          <p className="mt-6 text-center leading-7 text-white">
             You can{' '}
             <a
               href="https://www.linkedin.com/in/isabelcvieira/"

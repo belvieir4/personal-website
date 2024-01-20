@@ -24,16 +24,7 @@ const ebanx = new Route({
   component: Ebanx,
 });
 
-const project02 = new Route({
-  getParentRoute: () => rootRoute,
-  beforeLoad: () => ({
-    title: 'Test 2',
-  }),
-  path: '/project/02',
-  component: Project01,
-});
-
-const routeTree = rootRoute.addChildren([indexRoute, ebanx, project02]);
+const routeTree = rootRoute.addChildren([indexRoute, ebanx]);
 
 const router = new Router({
   routeTree,
