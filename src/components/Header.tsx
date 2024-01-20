@@ -14,11 +14,14 @@ function Header() {
   return (
     <div className="xs:gap-0 xs:flex-row xs:h-16 fixed left-0 top-0 flex w-full flex-col flex-wrap items-center justify-between gap-4 border-b border-b-gray-700 bg-gray-950 px-6 py-4 xl:px-12">
       <div>
-        <Link to="/" className="text-base font-bold text-white">
+        <Link
+          to="/"
+          className="text-base font-bold text-white hover:text-teal-400"
+        >
           Isabel Vieira
         </Link>
         {currentRoute?.context.title && (
-          <span className="hidden text-base text-white lg:inline">
+          <span className="hidden text-base text-white  lg:inline">
             {' '}
             / {currentRoute?.context.title}
           </span>
