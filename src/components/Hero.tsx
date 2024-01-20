@@ -8,7 +8,7 @@ export type HeroProps = {
 
 const Hero = ({ title, subtitle, tags }: HeroProps) => {
   return (
-    <div className="flex w-full flex-col items-center px-6 pb-14 pt-20 lg:px-20 lg:pb-20 lg:pt-32">
+    <div className="flex w-full flex-col items-center px-6 pb-16 pt-20 lg:px-20 lg:pb-28 lg:pt-32">
       <div className="mb-10 flex gap-3">
         {tags?.map((tag, index) => <Tag key={index}>{tag}</Tag>)}
       </div>
