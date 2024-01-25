@@ -14,7 +14,7 @@ export type ZoomImgProps = {
 function ZoomImg({ src, alt }: ZoomImgProps) {
   return (
     <div className="relative mt-8">
-      <TransformWrapper>
+      <TransformWrapper wheel={{ wheelDisabled: true }}>
         {({ zoomIn, zoomOut, resetTransform }) => (
           <>
             <div className="absolute bottom-2 right-2 z-10 flex flex-row rounded bg-gray-950 drop-shadow-lg">

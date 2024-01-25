@@ -2,10 +2,10 @@ import Hero from 'components/Hero';
 import Callout from 'components/Callout';
 import CalloutList from 'components/CalloutList';
 import TextBlock from 'components/TextBlock';
-import ImgIntro from 'pages/projects/ebanx/imgs/intro-img.jpg';
-import ImgScenario from 'pages/projects/ebanx/imgs/scenario-img.jpg';
-import ImgUserflow from 'pages/projects/ebanx/imgs/userflow-img.jpg';
-import ImgScreens from 'pages/projects/ebanx/imgs/product-screens.jpg';
+import ImgIntroEb from 'pages/projects/ebanx/imgs/intro-img.jpg';
+import ImgScenarioEb from 'pages/projects/ebanx/imgs/scenario-img.jpg';
+import ImgUserflowEb from 'pages/projects/ebanx/imgs/userflow-img.jpg';
+import ImgScreensEb from 'pages/projects/ebanx/imgs/product-screens.jpg';
 import ZoomImg from 'components/ZoomImg';
 import BackLink from 'components/BackLink';
 
@@ -21,8 +21,8 @@ const Ebanx = () => {
       {/* Intro Section */}
       <div className=" mb-20 flex w-full flex-col items-center justify-center gap-10 lg:flex-row lg:items-start xl:mb-32 xl:gap-14">
         <img
-          src={ImgIntro}
-          alt="Image of two phones showing product screens"
+          src={ImgIntroEb}
+          alt="Image of a phone and a laptop showing the same product screen in different formats"
           className="w-[320px] rounded-2xl object-cover md:w-[420px] xl:w-[520px]"
         />
         <div className="flex w-full max-w-[560px] flex-col items-start">
@@ -72,7 +72,7 @@ const Ebanx = () => {
       {/* Scenario Section */}
       <div className=" mb-20 flex w-full flex-col items-center justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
         <img
-          src={ImgScenario}
+          src={ImgScenarioEb}
           alt="Image of two phones showing product screens"
           className="w-[360px] rounded-2xl object-cover md:w-[460px] xl:w-[560px]"
         />
@@ -133,12 +133,12 @@ const Ebanx = () => {
         </div>
 
         <ZoomImg
-          src={ImgUserflow}
+          src={ImgUserflowEb}
           alt="Image of the userflow and the questions related to it"
         />
       </div>
 
-      {/* Conclusion Section */}
+      {/* Iterating Section */}
       <div className="mb-20 flex w-full flex-col items-center justify-center xl:mb-32 ">
         <TextBlock
           title="Iterating the product"
@@ -151,9 +151,13 @@ const Ebanx = () => {
             'The hand-off to the developers was also facilitated because we reused many existing components, so the development time was reduced.',
           ]}
         />
-        <ZoomImg src={ImgScreens} alt="Image of some of the product screens" />
+        <ZoomImg
+          src={ImgScreensEb}
+          alt="Image of some of the product screens"
+        />
       </div>
 
+      {/* Conclusion Section */}
       <div className=" mb-20 flex w-full flex-col items-center justify-center gap-12 lg:flex-row lg:items-start xl:mb-32 xl:gap-14">
         <div className="flex w-full max-w-[560px] flex-col items-start">
           <TextBlock

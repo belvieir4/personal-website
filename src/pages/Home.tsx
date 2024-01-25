@@ -1,6 +1,7 @@
 import Hero from 'components/Hero';
 import Highlight from 'components/Highlight';
 import ThumbEbanx from 'pages/projects/ebanx/imgs/thumb-ebanx.jpg';
+import ThumbCatho from 'pages/projects/catho/imgs/thumb-catho.jpg';
 import Card from 'components/Card';
 import ThumbDigimonList from 'pages/projects/frontprojects/imgs/thumb-digimonlist.jpg';
 import ThumbPersonalWebsite from 'pages/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
@@ -20,7 +21,7 @@ const Home = () => {
         <h2 className="mb-10 text-center text-4xl font-bold text-white">
           Highlighted Projects
         </h2>
-        <div className="flex w-full flex-col items-center gap-x-3 gap-y-12 md:grid md:w-auto md:grid-cols-[repeat(2,_auto)] md:items-start md:gap-16 lg:flex">
+        <div className="flex w-full flex-col items-center gap-x-3 gap-y-16 md:grid md:w-auto md:grid-cols-[repeat(2,_auto)] md:items-start md:gap-12 lg:flex lg:gap-16">
           <Highlight
             img={ThumbEbanx}
             title="Automated Refund Status Flow"
@@ -30,11 +31,11 @@ const Home = () => {
             className="md:w-auto"
           />
           <Highlight
-            img="https://picsum.photos/1400/800"
-            title="Test"
-            subtitle="Test"
-            to="/project/ebanx"
-            tags={['Product Design', 'Mobile App']}
+            img={ThumbCatho}
+            title="Redesigning a mobile app experience"
+            subtitle="A case on how redesigning the B2C iOS and Android apps improved user feedback and experience."
+            to="/project/catho"
+            tags={['Product Design', 'Native Mobile App']}
             reverse
             className="md:w-auto"
           />
@@ -54,7 +55,7 @@ const Home = () => {
         <h2 className="mb-10 text-center text-4xl font-bold text-white">
           Other Projects
         </h2>
-        <div className="mt-10 grid w-full grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-6">
+        <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-14 md:gap-6">
           <Card
             title="Personal Website"
             img={ThumbPersonalWebsite}

@@ -15,7 +15,7 @@ const Link = ({ children, small, ...props }: LinkProps) => {
   return (
     <RouterLink
       className={classNames(
-        'flex cursor-pointer items-center border-b border-b-transparent font-light text-teal-400 transition duration-300 ease-in-out	 hover:border-b-teal-400',
+        'flex cursor-pointer items-center border-b border-b-teal-400 font-light text-teal-400 transition duration-300 ease-in-out hover:border-b-teal-400	 lg:border-b-transparent',
         {
           'text-xl': !small,
         },
@@ -23,11 +23,7 @@ const Link = ({ children, small, ...props }: LinkProps) => {
       {...props}
     >
       {children}
-      <FontAwesomeIcon
-        size="sm"
-        className="ml-2 hidden lg:block"
-        icon={faArrowRight}
-      />
+      <FontAwesomeIcon size="sm" className="ml-2 block" icon={faArrowRight} />
     </RouterLink>
   );
 };
