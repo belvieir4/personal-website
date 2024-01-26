@@ -5,6 +5,9 @@ import TextBlock from 'components/TextBlock';
 import ZoomImg from 'components/ZoomImg';
 import ImgIntroCa from 'pages/projects/catho/imgs/intro-img.jpg';
 import ImgScenarioCa from 'pages/projects/catho/imgs/scenario-img.jpg';
+import ImgScreensCa from 'pages/projects/catho/imgs/product-screens.jpg';
+import ImgIosCa from 'pages/projects/catho/imgs/ios-catho-img.jpg';
+import BackLink from 'components/BackLink';
 
 const Catho = () => {
   return (
@@ -65,7 +68,7 @@ const Catho = () => {
       </div>
 
       {/* Investigating Section */}
-      <div className="mb-20 flex w-full flex-col items-center justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
+      <div className="mb-20 flex w-full flex-col items-start justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
         <TextBlock
           title="Investigating the problem"
           paragraphs={[
@@ -74,7 +77,7 @@ const Catho = () => {
             'These insights helped list some important aspects we should focus on while redesigning the app.',
           ]}
         />
-        <div className="flex w-full max-w-[560px] flex-col items-center justify-center gap-4">
+        <div className="flex w-full max-w-[560px] flex-col items-start justify-center gap-4">
           <CalloutList
             title="Main interview finds"
             content={[
@@ -90,7 +93,7 @@ const Catho = () => {
       </div>
 
       {/* Flow / Scenario Section */}
-      <div className=" mb-20 flex w-full flex-col items-center justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
+      <div className=" mb-20 flex w-full flex-col items-start justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
         <img
           src={ImgScenarioCa}
           alt="Image of two phones showing product screens"
@@ -101,13 +104,12 @@ const Catho = () => {
           paragraphs={[
             'In this step, the objective was to map all areas of the app with the team to understand which user flows were critical to be prioritized and how we could organize our work.',
             'We identified that the main flows needed for the user were registration/login, job search, job application, and resume and started the work there. The idea was to design and deliver these flows to the developers to work gradually, always acting between one and two sprints before them.',
-            'In this discussion, the developers pointed out that shipping new Android app versions was quicker because of Google Play, so we decided to use it to get feedback and iterate it before sending the new flows to the iOS team.',
+            'In this discussion, the developers pointed out that shipping new Android app versions was quicker because of Google Play, so we decided to use it to get feedback and iterate it before sending the new flows to the iOS development team.',
           ]}
         />
       </div>
 
       {/* Iterating Section */}
-
       <div className="mb-20 flex w-full flex-col items-center justify-center xl:mb-32 ">
         <TextBlock
           title="Iterating the Android App"
@@ -119,10 +121,63 @@ const Catho = () => {
           ]}
         />
         <ZoomImg
-          src={ImgScenarioCa}
+          src={ImgScreensCa}
           alt="Image of some of the product screens"
         />
       </div>
+
+      {/* iOS App Section */}
+      <div className=" mb-20 flex w-full flex-col items-start justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
+        <TextBlock
+          title="Adding the flows on the iOS app"
+          paragraphs={[
+            'For the new iOS app, we made some adjustments to fulfill the needs of the MVP and the requirements of the Apple platform.',
+            'For the approval of the app on the Apple Store, it was necessary to include a flow for users without an account registered at Catho, which led us to design a flow that would allow the user to search for job ads and consult the descriptions of job ads without being logged in and, when trying to make an application, we would redirect the user for the register and paying flow (as it is the central objective of the business).',
+            'As we had already updated the Android app to the new UI, I just had to adapt the interface for the iOS standard, making the delivery of the solution much more effortless. With that, we guarantee the experience and interface for the user would be the same in both apps.',
+          ]}
+        />
+        <img
+          src={ImgIosCa}
+          alt="Image of three phones showing product screens"
+          className="w-[360px] rounded-2xl object-cover md:w-[460px] xl:w-[560px]"
+        />
+      </div>
+
+      {/* Conclusion Section */}
+      <div className=" mb-20 flex w-full flex-col items-center justify-center gap-12 lg:flex-row lg:items-start xl:mb-32 xl:gap-14">
+        <div className="flex w-full max-w-[560px] flex-col items-start">
+          <TextBlock
+            title="Results"
+            paragraphs={[
+              'After implementation, we started tracking some data over the next few months and noticed the following results:',
+            ]}
+          />
+          <div className="mt-8 flex w-full max-w-[560px] flex-col items-stretch justify-center gap-4">
+            <Callout
+              title="Increase of average rating"
+              text="The average rating went up from 3.9 to 4.6 on Google Play"
+            />
+            <Callout
+              title="Decrease in user complaints about the app"
+              text="As we fixed a lot of bugs, the number of tickets about the app decreased for the CS team"
+            />
+            <Callout
+              title="Increase in job application numbers and new users"
+              text="As the experience for user registration and the process of finding and applying for jobs improved, the number of new users and applications increased"
+            />
+          </div>
+        </div>
+        <TextBlock
+          title="Conclusion"
+          paragraphs={[
+            "The redesign process for Catho's apps was a challenge that took six months to complete. Still, it significantly improved user satisfaction and added value to the company, increasing key numbers like job applications and new users.",
+            'The company announced their rebranding in January, and the apps were the only products that fully matched the new brand, thanks to our efforts on the redesign.',
+            'This project helped me gain more experience with product design for native mobile apps and how to iterate them, especially using constant user feedback and addressing them quickly and efficiently.',
+          ]}
+        />
+      </div>
+
+      <BackLink />
     </>
   );
 };

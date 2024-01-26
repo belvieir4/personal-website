@@ -70,7 +70,7 @@ const Ebanx = () => {
       </div>
 
       {/* Scenario Section */}
-      <div className=" mb-20 flex w-full flex-col items-center justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
+      <div className=" mb-20 flex w-full flex-col items-start justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
         <img
           src={ImgScenarioEb}
           alt="Image of two phones showing product screens"
@@ -85,7 +85,7 @@ const Ebanx = () => {
       </div>
 
       {/* Investigation Section */}
-      <div className="mb-20 flex w-full flex-col items-center justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
+      <div className="mb-20 flex w-full flex-col items-start justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
         <TextBlock
           title="Investigating the problem"
           paragraphs={[
