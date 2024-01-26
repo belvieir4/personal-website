@@ -2,6 +2,7 @@ import Hero from 'components/Hero';
 import Highlight from 'components/Highlight';
 import ThumbEbanx from 'pages/projects/ebanx/imgs/thumb-ebanx.jpg';
 import ThumbCatho from 'pages/projects/catho/imgs/thumb-catho.jpg';
+import ThumbDS from 'pages/projects/designsystem/imgs/thumb-designsystem.jpg';
 import Card from 'components/Card';
 import ThumbDigimonList from 'pages/projects/frontprojects/imgs/thumb-digimonlist.jpg';
 import ThumbPersonalWebsite from 'pages/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
@@ -32,7 +33,7 @@ const Home = () => {
           />
           <Highlight
             img={ThumbCatho}
-            title="Redesigning a mobile app experience"
+            title="Redesigning a Mobile App Experience"
             subtitle="A case on how redesigning the B2C iOS and Android apps improved user feedback and experience."
             to="/project/catho"
             tags={['Product Design', 'Native Mobile App']}
@@ -40,11 +41,11 @@ const Home = () => {
             className="md:w-auto"
           />
           <Highlight
-            img="https://picsum.photos/1400/800"
-            title="Test"
-            subtitle="Test"
-            to="/project/ebanx"
-            tags={['Product Design', 'Mobile App']}
+            img={ThumbDS}
+            title="A Design System for Financial"
+            subtitle="This design system was developed specifically to meet the needs of a B2B and B2C financial product."
+            to="/project/designsystem"
+            tags={['Product Design', 'Design System']}
             className="md:w-auto"
           />
         </div>

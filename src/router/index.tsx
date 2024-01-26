@@ -2,7 +2,7 @@ import MainView from 'MainView';
 import Home from 'pages/Home';
 import Ebanx from 'pages/projects/ebanx/Ebanx';
 import Catho from 'pages/projects/catho/Catho';
-
+import DesignSystem from 'pages/projects/designsystem/DesignSystem';
 import { Router, Route, RootRoute } from '@tanstack/react-router';
 
 const rootRoute = new RootRoute({
@@ -27,13 +27,27 @@ const ebanx = new Route({
 const catho = new Route({
   getParentRoute: () => rootRoute,
   beforeLoad: () => ({
-    title: 'Redesigning the mobile app experience',
+    title: 'Redesigning a Mobile App Experience',
   }),
   path: '/project/catho',
   component: Catho,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, ebanx, catho]);
+const designsystem = new Route({
+  getParentRoute: () => rootRoute,
+  beforeLoad: () => ({
+    title: 'A Design System for Financial',
+  }),
+  path: '/project/designsystem',
+  component: DesignSystem,
+});
+
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  ebanx,
+  catho,
+  designsystem,
+]);
 
 const router = new Router({
   routeTree,

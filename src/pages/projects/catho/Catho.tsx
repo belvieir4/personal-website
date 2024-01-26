@@ -14,7 +14,7 @@ const Catho = () => {
     <>
       <Hero
         tags={['Product Design', 'Native Mobile App']}
-        title="Redesigning a mobile app experience"
+        title="Redesigning a Mobile App Experience"
         subtitle="A case on how redesigning the B2C iOS and Android apps improved user feedback and experience."
       />
 

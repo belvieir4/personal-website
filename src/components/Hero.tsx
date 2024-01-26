@@ -15,7 +15,7 @@ const Hero = ({ title, subtitle, tags }: HeroProps) => {
       <h1 className="text-center text-4xl font-bold text-white lg:text-6xl">
         {title}
       </h1>
-      <p className=" mt-2 text-center font-light text-white  lg:text-xl">
+      <p className=" mt-4 text-center font-light text-white lg:text-xl">
         {subtitle}
       </p>
       <hr className="mt-14 w-40 rounded-sm border-2 border-teal-400 lg:mt-20" />
