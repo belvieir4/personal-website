@@ -5,13 +5,20 @@ import {
 } from '@tanstack/react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { RefAttributes } from 'react';
 
 export type LinkProps = RouterLinkProps & {
-  children: string;
   small?: boolean;
+  children: string;
 };
 
-const Link = ({ children, small, ...props }: LinkProps) => {
+function Link({
+  small,
+  children,
+  href,
+  to,
+  ...props
+}: LinkProps & RefAttributes<HTMLAnchorElement> & { small?: boolean }) {
   return (
     <RouterLink
       className={classNames(
@@ -20,12 +27,13 @@ const Link = ({ children, small, ...props }: LinkProps) => {
           'text-xl': !small,
         },
       )}
+      to={to || href}
       {...props}
     >
       {children}
       <FontAwesomeIcon size="sm" className="ml-2 block" icon={faArrowRight} />
     </RouterLink>
   );
-};
+}
 
 export default Link;

@@ -1,21 +1,11 @@
 import Link from './Link';
-import { LinkProps } from '@tanstack/react-router';
+import { LinkProps } from 'components/Link';
 import Tag from './Tag';
-
-export type Links =
-  | {
-      text: string;
-      to: LinkProps['to'];
-    }
-  | {
-      text: string;
-      href: string;
-    };
 
 export type CardProps = {
   title: string;
   img: string;
-  links: Links[];
+  links: LinkProps[];
   tags: string[];
 };
 
@@ -31,10 +21,8 @@ const Card = ({ title, img, links, tags }: CardProps) => {
         </div>
         <h4 className="text-2xl font-bold text-white">{title}</h4>
         <div className="mt-6 flex gap-8">
-          {links.map(({ text, ...props }) => (
-            <Link {...props} small>
-              {text}
-            </Link>
+          {links.map((props, index) => (
+            <Link key={index} {...props} small />
           ))}
         </div>
       </div>

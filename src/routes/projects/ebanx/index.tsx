@@ -2,20 +2,28 @@ import Hero from 'components/Hero';
 import Callout from 'components/Callout';
 import CalloutList from 'components/CalloutList';
 import TextBlock from 'components/TextBlock';
-import ImgIntroEb from 'pages/projects/ebanx/imgs/intro-img.jpg';
-import ImgScenarioEb from 'pages/projects/ebanx/imgs/scenario-img.jpg';
-import ImgUserflowEb from 'pages/projects/ebanx/imgs/userflow-img.jpg';
-import ImgScreensEb from 'pages/projects/ebanx/imgs/product-screens.jpg';
+import ImgIntroEb from 'routes/projects/ebanx/imgs/intro-img.jpg';
+import ImgScenarioEb from 'routes/projects/ebanx/imgs/scenario-img.jpg';
+import ImgUserflowEb from 'routes/projects/ebanx/imgs/userflow-img.jpg';
+import ImgScreensEb from 'routes/projects/ebanx/imgs/product-screens.jpg';
 import ZoomImg from 'components/ZoomImg';
 import BackLink from 'components/BackLink';
+import { createFileRoute } from '@tanstack/react-router';
 
-const Ebanx = () => {
+export const Route = createFileRoute('/projects/ebanx/')({
+  component: Ebanx,
+  beforeLoad: () => ({
+    title: 'Automated Refund Status Flow',
+  }),
+});
+
+function Ebanx() {
   return (
     <>
       <Hero
         tags={['Product Design', 'Responsive Website']}
         title="Automated Refund Status Flow"
-        subtitle="A case on how we can improve the user's experience on a Help Center automating the access to information."
+        subtitle="A case on how I improved the user's experience on a Help Center automating the access to information."
       />
 
       {/* Intro Section */}
@@ -194,6 +202,6 @@ const Ebanx = () => {
       <BackLink />
     </>
   );
-};
+}
 
 export default Ebanx;

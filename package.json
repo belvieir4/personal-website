@@ -14,7 +14,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@tanstack/react-router": "^1.4.6",
+    "@tanstack/react-router": "^1.13.0",
     "@tanstack/router-devtools": "^1.4.6",
     "classnames": "^2.5.1",
     "framer-motion": "^11.0.2",
@@ -23,6 +23,7 @@
     "react-zoom-pan-pinch": "^3.3.0"
   },
   "devDependencies": {
+    "@tanstack/router-vite-plugin": "^1.12.16",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",

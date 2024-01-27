@@ -3,13 +3,21 @@ import CalloutList from 'components/CalloutList';
 import Hero from 'components/Hero';
 import TextBlock from 'components/TextBlock';
 import ZoomImg from 'components/ZoomImg';
-import ImgIntroCa from 'pages/projects/catho/imgs/intro-img.jpg';
-import ImgScenarioCa from 'pages/projects/catho/imgs/scenario-img.jpg';
-import ImgScreensCa from 'pages/projects/catho/imgs/product-screens.jpg';
-import ImgIosCa from 'pages/projects/catho/imgs/ios-catho-img.jpg';
+import ImgIntroCa from 'routes/projects/catho/imgs/intro-img.jpg';
+import ImgScenarioCa from 'routes/projects/catho/imgs/scenario-img.jpg';
+import ImgScreensCa from 'routes/projects/catho/imgs/product-screens.jpg';
+import ImgIosCa from 'routes/projects/catho/imgs/ios-catho-img.jpg';
 import BackLink from 'components/BackLink';
+import { createFileRoute } from '@tanstack/react-router';
 
-const Catho = () => {
+export const Route = createFileRoute('/projects/catho/')({
+  component: Catho,
+  beforeLoad: () => ({
+    title: 'Redesigning a Mobile App Experience',
+  }),
+});
+
+function Catho() {
   return (
     <>
       <Hero
@@ -180,6 +188,4 @@ const Catho = () => {
       <BackLink />
     </>
   );
-};
-
-export default Catho;
+}

@@ -1,15 +1,19 @@
 import Hero from 'components/Hero';
 import Highlight from 'components/Highlight';
-import ThumbEbanx from 'pages/projects/ebanx/imgs/thumb-ebanx.jpg';
-import ThumbCatho from 'pages/projects/catho/imgs/thumb-catho.jpg';
-import ThumbDS from 'pages/projects/designsystem/imgs/thumb-designsystem.jpg';
+import ThumbEbanx from 'routes/projects/ebanx/imgs/thumb-ebanx.jpg';
+import ThumbCatho from 'routes/projects/catho/imgs/thumb-catho.jpg';
 import Card from 'components/Card';
-import ThumbDigimonList from 'pages/projects/frontprojects/imgs/thumb-digimonlist.jpg';
-import ThumbPersonalWebsite from 'pages/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
-import ThumbSimpleLogin from 'pages/projects/frontprojects/imgs/thumb-simplelogin.jpg';
+import ThumbDigimonList from 'routes/projects/frontprojects/imgs/thumb-digimonlist.jpg';
+import ThumbPersonalWebsite from 'routes/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
+import ThumbSimpleLogin from 'routes/projects/frontprojects/imgs/thumb-simplelogin.jpg';
 import PersonalPhoto from 'assets/personal-photo.png';
+import { createFileRoute } from '@tanstack/react-router';
 
-const Home = () => {
+export const Route = createFileRoute('/')({
+  component: Home,
+});
+
+function Home() {
   return (
     <>
       <Hero
@@ -26,8 +30,8 @@ const Home = () => {
           <Highlight
             img={ThumbEbanx}
             title="Automated Refund Status Flow"
-            subtitle="A case on how we can improve the user's experience on a Help Center automating the access to information."
-            to="/project/ebanx"
+            subtitle="A case on how I improved the user's experience on a Help Center automating the access to information."
+            to="/projects/ebanx"
             tags={['Product Design', 'Responsive Website']}
             className="md:w-auto"
           />
@@ -35,17 +39,9 @@ const Home = () => {
             img={ThumbCatho}
             title="Redesigning a Mobile App Experience"
             subtitle="A case on how redesigning the B2C iOS and Android apps improved user feedback and experience."
-            to="/project/catho"
+            to="/projects/catho"
             tags={['Product Design', 'Native Mobile App']}
             reverse
-            className="md:w-auto"
-          />
-          <Highlight
-            img={ThumbDS}
-            title="A Design System for Financial"
-            subtitle="This design system was developed specifically to meet the needs of a B2B and B2C financial product."
-            to="/project/designsystem"
-            tags={['Product Design', 'Design System']}
             className="md:w-auto"
           />
         </div>
@@ -62,8 +58,9 @@ const Home = () => {
             img={ThumbPersonalWebsite}
             links={[
               {
-                text: 'View on Github',
+                children: 'View on Github',
                 href: 'https://github.com/belvieir4/personal-website',
+                target: '_blank',
               },
             ]}
             tags={['Front-end Development']}
@@ -73,12 +70,14 @@ const Home = () => {
             img={ThumbDigimonList}
             links={[
               {
-                text: 'Live preview',
+                children: 'Live preview',
                 href: 'https://belvieir4.github.io/digimon-table/',
+                target: '_blank',
               },
               {
-                text: 'View on Github',
+                children: 'View on Github',
                 href: 'https://github.com/belvieir4/digimon-table',
+                target: '_blank',
               },
             ]}
             tags={['Front-end Development']}
@@ -88,12 +87,14 @@ const Home = () => {
             img={ThumbSimpleLogin}
             links={[
               {
-                text: 'Live Preview',
+                children: 'Live Preview',
                 href: 'https://belvieir4.github.io/login/',
+                target: '_blank',
               },
               {
-                text: 'View on Github',
+                children: 'View on Github',
                 href: 'https://github.com/belvieir4/login',
+                target: '_blank',
               },
             ]}
             tags={['Front-end Development']}
@@ -138,6 +139,4 @@ const Home = () => {
       </div>
     </>
   );
-};
-
-export default Home;
+}
