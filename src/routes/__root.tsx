@@ -19,4 +19,7 @@ export const Route = createRootRoute({
       </>
     );
   },
+  beforeLoad: () => ({
+    title: '',
+  }),
 });
