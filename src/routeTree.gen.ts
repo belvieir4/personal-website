@@ -5,6 +5,7 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as IndexImport } from './routes/index'
 import { Route as ProjectsEbanxIndexImport } from './routes/projects/ebanx/index'
+import { Route as ProjectsDesignSystemIndexImport } from './routes/projects/design-system/index'
 import { Route as ProjectsCathoIndexImport } from './routes/projects/catho/index'
 
 // Create/Update Routes
@@ -16,6 +17,11 @@ const IndexRoute = IndexImport.update({
 
 const ProjectsEbanxIndexRoute = ProjectsEbanxIndexImport.update({
   path: '/projects/ebanx/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ProjectsDesignSystemIndexRoute = ProjectsDesignSystemIndexImport.update({
+  path: '/projects/design-system/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -36,6 +42,10 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsCathoIndexImport
       parentRoute: typeof rootRoute
     }
+    '/projects/design-system/': {
+      preLoaderRoute: typeof ProjectsDesignSystemIndexImport
+      parentRoute: typeof rootRoute
+    }
     '/projects/ebanx/': {
       preLoaderRoute: typeof ProjectsEbanxIndexImport
       parentRoute: typeof rootRoute
@@ -48,5 +58,6 @@ declare module '@tanstack/react-router' {
 export const routeTree = rootRoute.addChildren([
   IndexRoute,
   ProjectsCathoIndexRoute,
+  ProjectsDesignSystemIndexRoute,
   ProjectsEbanxIndexRoute,
 ])

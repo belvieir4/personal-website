@@ -2,6 +2,7 @@ import Hero from 'components/Hero';
 import Highlight from 'components/Highlight';
 import ThumbEbanx from 'routes/projects/ebanx/imgs/thumb-ebanx.jpg';
 import ThumbCatho from 'routes/projects/catho/imgs/thumb-catho.jpg';
+import ThumbDS from 'routes/projects/design-system/imgs/thumb-designsystem.jpg';
 import Card from 'components/Card';
 import ThumbDigimonList from 'routes/projects/frontprojects/imgs/thumb-digimonlist.jpg';
 import ThumbPersonalWebsite from 'routes/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
@@ -45,6 +46,14 @@ function Home() {
             to="/projects/catho"
             tags={['Product Design', 'Native Mobile App']}
             reverse
+            className="md:w-auto"
+          />
+          <Highlight
+            img={ThumbDS}
+            title="A Design System for Financial"
+            subtitle="The process of building a design system to meet the needs of a B2B and B2C financial product."
+            to="/projects/design-system"
+            tags={['Product Design', 'Design System']}
             className="md:w-auto"
           />
         </div>
