@@ -8,6 +8,7 @@ import ThumbPersonalWebsite from 'routes/projects/frontprojects/imgs/thumb-perso
 import ThumbSimpleLogin from 'routes/projects/frontprojects/imgs/thumb-simplelogin.jpg';
 import PersonalPhoto from 'assets/personal-photo.png';
 import { createFileRoute } from '@tanstack/react-router';
+import AnimatedBlock from 'components/AnimatedBlock';
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -22,6 +23,7 @@ function Home() {
       <Hero
         title="Hi, I'm Isabel Vieira"
         subtitle="A Product Designer and Front-end Developer based in Canada"
+        animate
       />
 
       {/* Project Main Grid */}
@@ -55,7 +57,11 @@ function Home() {
         <h2 className="mb-10 text-center text-4xl font-bold text-white">
           Other Projects
         </h2>
-        <div className="grid w-full grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-14 md:gap-6">
+        <AnimatedBlock
+          className="grid w-full grid-cols-[repeat(auto-fit,_minmax(240px,_1fr))] gap-14 md:gap-6"
+          direction="top"
+          delayed
+        >
           <Card
             title="Personal Website"
             img={ThumbPersonalWebsite}
@@ -102,7 +108,7 @@ function Home() {
             ]}
             tags={['Front-end Development']}
           />
-        </div>
+        </AnimatedBlock>
       </div>
 
       {/* About me section */}

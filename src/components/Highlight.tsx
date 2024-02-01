@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import Link from './Link';
 import { LinkProps } from '@tanstack/react-router';
 import Tag from './Tag';
+import AnimatedBlock from './AnimatedBlock';
 
 export type HighlightProps = {
   title: string;
@@ -32,22 +33,26 @@ const Highlight = ({
         className,
       )}
     >
-      <img
-        className="h-72 w-full rounded-2xl object-cover md:h-52 md:w-[328px] lg:h-[320px] lg:w-[520px] xl:h-[400px] xl:w-[624px]"
-        src={img}
-      />
-      <div className="flex w-full flex-col items-start md:w-[328px] lg:w-[624px]">
-        <div className="mb-6 flex gap-3">
-          {tags.map((tag, index) => (
-            <Tag key={index}>{tag}</Tag>
-          ))}
+      <AnimatedBlock direction={reverse ? 'right' : 'left'}>
+        <img
+          className="h-72 w-full rounded-2xl object-cover md:h-52 md:w-[328px] lg:h-[320px] lg:w-[520px] xl:h-[400px] xl:w-[624px]"
+          src={img}
+        />
+      </AnimatedBlock>
+      <AnimatedBlock direction={reverse ? 'left' : 'right'}>
+        <div className="flex w-full flex-col items-start md:w-[328px] lg:w-[624px]">
+          <div className="mb-6 flex gap-3">
+            {tags.map((tag, index) => (
+              <Tag key={index}>{tag}</Tag>
+            ))}
+          </div>
+          <h3 className="text-3xl font-bold text-white">{title}</h3>
+          <p className="mb-10 mt-4 text-base font-light leading-7 text-white">
+            {subtitle}
+          </p>
+          <Link to={to}>View case</Link>
         </div>
-        <h3 className="text-3xl font-bold text-white">{title}</h3>
-        <p className="mb-10 mt-4 text-base font-light leading-7 text-white">
-          {subtitle}
-        </p>
-        <Link to={to}>View case</Link>
-      </div>
+      </AnimatedBlock>
     </div>
   );
 };
