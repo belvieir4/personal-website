@@ -37,7 +37,7 @@ function Catho() {
           <TextBlock
             title="Introduction"
             paragraphs={[
-              'Catho is a company that provides HR services throughout Brazil, having a B2B recruitment management web system, and a job board for B2C users available as an website and native mobile apps for iOS and Android.',
+              'Catho is a company that provides HR services throughout Brazil, having a B2B recruitment management web system, and a job board for B2C users available as a website and native mobile apps for iOS and Android.',
               'I was the only the designer responsible for both of the apps, iOS and Android, having the objective of delivering the B2C user a seamless experience for job hunting and application through their phones.',
             ]}
           />
