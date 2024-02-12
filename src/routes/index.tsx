@@ -5,7 +5,7 @@ import ThumbCatho from 'routes/projects/catho/imgs/thumb-catho.jpg';
 import Card from 'components/Card';
 import ThumbDigimonList from 'routes/projects/frontprojects/imgs/thumb-digimonlist.jpg';
 import ThumbPersonalWebsite from 'routes/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
-import ThumbSimpleLogin from 'routes/projects/frontprojects/imgs/thumb-simplelogin.jpg';
+import ThumbListin from 'routes/projects/frontprojects/imgs/thumb-listin.jpg';
 import PersonalPhoto from 'assets/personal-photo.png';
 import { createFileRoute } from '@tanstack/react-router';
 import AnimatedBlock from 'components/AnimatedBlock';
@@ -63,6 +63,23 @@ function Home() {
           delayed
         >
           <Card
+            title="Listin - image list generator"
+            img={ThumbListin}
+            links={[
+              {
+                children: 'Live Preview',
+                href: 'https://listin-img.vercel.app',
+                target: '_blank',
+              },
+              {
+                children: 'View on Github',
+                href: 'https://github.com/belvieir4/list-generator',
+                target: '_blank',
+              },
+            ]}
+            tags={['Front-end Development']}
+          />
+          <Card
             title="Personal Website"
             img={ThumbPersonalWebsite}
             links={[
@@ -86,23 +103,6 @@ function Home() {
               {
                 children: 'View on Github',
                 href: 'https://github.com/belvieir4/digimon-table',
-                target: '_blank',
-              },
-            ]}
-            tags={['Front-end Development']}
-          />
-          <Card
-            title="Simple Login"
-            img={ThumbSimpleLogin}
-            links={[
-              {
-                children: 'Live Preview',
-                href: 'https://belvieir4.github.io/login/',
-                target: '_blank',
-              },
-              {
-                children: 'View on Github',
-                href: 'https://github.com/belvieir4/login',
                 target: '_blank',
               },
             ]}
