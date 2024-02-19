@@ -1,8 +1,8 @@
-import Link from "./Link";
-import { LinkProps } from "@/components/Link";
-import Image from "next/image";
-import Tag from "./Tag";
-import { StaticImageData } from "next/image";
+import Link from './Link';
+import { LinkProps } from '@/components/Link';
+import Image from 'next/image';
+import Tag from './Tag';
+import { StaticImageData } from 'next/image';
 
 export type CardProps = {
   title: string;

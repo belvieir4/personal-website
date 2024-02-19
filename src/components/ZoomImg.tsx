@@ -1,12 +1,12 @@
-"use client";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+'use client';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faMinus,
   faPlus,
   faRotateBack,
-} from "@fortawesome/free-solid-svg-icons";
-import Image, { StaticImageData } from "next/image";
+} from '@fortawesome/free-solid-svg-icons';
+import Image, { StaticImageData } from 'next/image';
 
 export type ZoomImgProps = {
   src: StaticImageData;

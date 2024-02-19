@@ -1,8 +1,8 @@
-import classNames from "classnames";
-import Link from "./Link";
-import Tag from "./Tag";
-import AnimatedBlock from "./AnimatedBlock";
-import Image, { StaticImageData } from "next/image";
+import classNames from 'classnames';
+import Link from './Link';
+import Tag from './Tag';
+import AnimatedBlock from './AnimatedBlock';
+import Image, { StaticImageData } from 'next/image';
 
 export type HighlightProps = {
   title: string;
@@ -26,14 +26,14 @@ const Highlight = ({
   return (
     <div
       className={classNames(
-        "flex w-full flex-col items-center justify-center gap-14 lg:flex-row lg:justify-stretch",
+        'flex w-full flex-col items-center justify-center gap-14 lg:flex-row lg:justify-stretch',
         {
-          "lg:flex-row-reverse": reverse,
+          'lg:flex-row-reverse': reverse,
         },
-        className
+        className,
       )}
     >
-      <AnimatedBlock direction={reverse ? "right" : "left"}>
+      <AnimatedBlock direction={reverse ? 'right' : 'left'}>
         <Image
           priority
           alt=""
@@ -41,7 +41,7 @@ const Highlight = ({
           src={img}
         />
       </AnimatedBlock>
-      <AnimatedBlock direction={reverse ? "left" : "right"}>
+      <AnimatedBlock direction={reverse ? 'left' : 'right'}>
         <div className="flex w-full flex-col items-start md:w-[328px] lg:w-[624px]">
           <div className="mb-6 flex gap-3">
             {tags.map((tag, index) => (
