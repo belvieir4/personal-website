@@ -10,11 +10,10 @@ import ImgIosCa from '@/app/projects/catho/imgs/ios-catho-img.jpg';
 import BackLink from '@/components/BackLink';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-
-export const title = 'Redesigning a Mobile App Experience';
+import routes from '@/routes';
 
 const metadata: Metadata = {
-  title,
+  title: routes.projects.catho.title,
 };
 
 export default function Catho() {

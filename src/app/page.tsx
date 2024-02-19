@@ -9,6 +9,7 @@ import ThumbListin from '@/app/projects/frontprojects/imgs/thumb-listin.jpg';
 import PersonalPhoto from '@/assets/personal-photo.png';
 import AnimatedBlock from '@/components/AnimatedBlock';
 import Image from 'next/image';
+import routes from '@/routes';
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
             img={ThumbEbanx}
             title="Automated Refund Status Flow"
             subtitle="A case on how I improved the user's experience on a Help Center automating the access to information."
-            href="/projects/ebanx"
+            href={routes.projects.ebanx.pathname}
             tags={['Product Design', 'Responsive Website']}
             className="md:w-auto"
           />
@@ -37,7 +38,7 @@ export default function Home() {
             img={ThumbCatho}
             title="Redesigning a Mobile App Experience"
             subtitle="A case on how redesigning the B2C iOS and Android apps improved user feedback and experience."
-            href="/projects/catho"
+            href={routes.projects.catho.pathname}
             tags={['Product Design', 'Native Mobile App']}
             reverse
             className="md:w-auto"

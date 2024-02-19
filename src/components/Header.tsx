@@ -9,15 +9,14 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import ScrollProgressBar from './ScrollProgressBar';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { title as ebanx } from '@/app/projects/ebanx/page';
-import { title as catho } from '@/app/projects/catho/page';
+import routes from '@/routes';
 
 function Header() {
   const pathname = usePathname();
 
   const titles: Record<string, string> = {
-    '/projects/ebanx': ebanx,
-    '/projects/catho': catho,
+    [routes.projects.catho.pathname]: routes.projects.catho.title,
+    [routes.projects.ebanx.pathname]: routes.projects.ebanx.title,
   };
 
   const title = titles[pathname];

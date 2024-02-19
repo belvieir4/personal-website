@@ -10,11 +10,10 @@ import ZoomImg from '@/components/ZoomImg';
 import BackLink from '@/components/BackLink';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-
-export const title = 'Automated Refund Status Flow';
+import routes from '@/routes';
 
 const metadata: Metadata = {
-  title,
+  title: routes.projects.ebanx.title,
 };
 
 export default function Ebanx() {
