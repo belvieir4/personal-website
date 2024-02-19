@@ -1,23 +1,22 @@
-import Hero from 'components/Hero';
-import Callout from 'components/Callout';
-import CalloutList from 'components/CalloutList';
-import TextBlock from 'components/TextBlock';
-import ImgIntroEb from 'routes/projects/ebanx/imgs/intro-img.jpg';
-import ImgScenarioEb from 'routes/projects/ebanx/imgs/scenario-img.jpg';
-import ImgUserflowEb from 'routes/projects/ebanx/imgs/userflow-img.jpg';
-import ImgScreensEb from 'routes/projects/ebanx/imgs/product-screens.jpg';
-import ZoomImg from 'components/ZoomImg';
-import BackLink from 'components/BackLink';
-import { createFileRoute } from '@tanstack/react-router';
+import Hero from '@/components/Hero';
+import Callout from '@/components/Callout';
+import CalloutList from '@/components/CalloutList';
+import TextBlock from '@/components/TextBlock';
+import ImgIntroEb from '@/app/projects/ebanx/imgs/intro-img.jpg';
+import ImgScenarioEb from '@/app/projects/ebanx/imgs/scenario-img.jpg';
+import ImgUserflowEb from '@/app/projects/ebanx/imgs/userflow-img.jpg';
+import ImgScreensEb from '@/app/projects/ebanx/imgs/product-screens.jpg';
+import ZoomImg from '@/components/ZoomImg';
+import BackLink from '@/components/BackLink';
+import Image from 'next/image';
+import type { Metadata } from 'next';
+import routes from '@/routes';
 
-export const Route = createFileRoute('/projects/ebanx/')({
-  component: Ebanx,
-  beforeLoad: () => ({
-    title: 'Automated Refund Status Flow',
-  }),
-});
+const metadata: Metadata = {
+  title: routes.projects.ebanx.title,
+};
 
-function Ebanx() {
+export default function Ebanx() {
   return (
     <>
       <Hero
@@ -28,7 +27,8 @@ function Ebanx() {
 
       {/* Intro Section */}
       <div className=" mb-20 flex w-full flex-col items-center justify-center gap-10 lg:flex-row lg:items-start xl:mb-32 xl:gap-14">
-        <img
+        <Image
+          priority
           src={ImgIntroEb}
           alt="Image of a phone and a laptop showing the same product screen in different formats"
           className="w-[320px] rounded-2xl object-cover md:w-[420px] xl:w-[520px]"
@@ -79,7 +79,7 @@ function Ebanx() {
 
       {/* Scenario Section */}
       <div className=" mb-20 flex w-full flex-col items-start justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
-        <img
+        <Image
           src={ImgScenarioEb}
           alt="Image of two phones showing product screens"
           className="w-[360px] rounded-2xl object-cover md:w-[460px] xl:w-[560px]"
@@ -203,5 +203,3 @@ function Ebanx() {
     </>
   );
 }
-
-export default Ebanx;

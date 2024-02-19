@@ -1,23 +1,17 @@
-import Hero from 'components/Hero';
-import Highlight from 'components/Highlight';
-import ThumbEbanx from 'routes/projects/ebanx/imgs/thumb-ebanx.jpg';
-import ThumbCatho from 'routes/projects/catho/imgs/thumb-catho.jpg';
-import Card from 'components/Card';
-import ThumbDigimonList from 'routes/projects/frontprojects/imgs/thumb-digimonlist.jpg';
-import ThumbPersonalWebsite from 'routes/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
-import ThumbListin from 'routes/projects/frontprojects/imgs/thumb-listin.jpg';
-import PersonalPhoto from 'assets/personal-photo.png';
-import { createFileRoute } from '@tanstack/react-router';
-import AnimatedBlock from 'components/AnimatedBlock';
+import Hero from '@/components/Hero';
+import Highlight from '@/components/Highlight';
+import ThumbEbanx from '@/app/projects/ebanx/imgs/thumb-ebanx.jpg';
+import ThumbCatho from '@/app/projects/catho/imgs/thumb-catho.jpg';
+import Card from '@/components/Card';
+import ThumbDigimonList from '@/app/projects/frontprojects/imgs/thumb-digimonlist.jpg';
+import ThumbPersonalWebsite from '@/app/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
+import ThumbListin from '@/app/projects/frontprojects/imgs/thumb-listin.jpg';
+import PersonalPhoto from '@/assets/personal-photo.png';
+import AnimatedBlock from '@/components/AnimatedBlock';
+import Image from 'next/image';
+import routes from '@/routes';
 
-export const Route = createFileRoute('/')({
-  component: Home,
-  beforeLoad: () => ({
-    title: '',
-  }),
-});
-
-function Home() {
+export default function Home() {
   return (
     <>
       <Hero
@@ -36,7 +30,7 @@ function Home() {
             img={ThumbEbanx}
             title="Automated Refund Status Flow"
             subtitle="A case on how I improved the user's experience on a Help Center automating the access to information."
-            to="/projects/ebanx"
+            href={routes.projects.ebanx.pathname}
             tags={['Product Design', 'Responsive Website']}
             className="md:w-auto"
           />
@@ -44,7 +38,7 @@ function Home() {
             img={ThumbCatho}
             title="Redesigning a Mobile App Experience"
             subtitle="A case on how redesigning the B2C iOS and Android apps improved user feedback and experience."
-            to="/projects/catho"
+            href={routes.projects.catho.pathname}
             tags={['Product Design', 'Native Mobile App']}
             reverse
             className="md:w-auto"
@@ -114,7 +108,7 @@ function Home() {
       {/* About me section */}
       <div className="flex w-full flex-col items-center px-4">
         <hr className="mb-20 mt-20 w-40 rounded-sm border-2 border-teal-400 lg:mt-32" />
-        <img
+        <Image
           src={PersonalPhoto}
           alt="Photo in black and white of Isabel Vieira"
         />

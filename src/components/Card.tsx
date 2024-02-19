@@ -1,10 +1,12 @@
 import Link from './Link';
-import { LinkProps } from 'components/Link';
+import { LinkProps } from '@/components/Link';
+import Image from 'next/image';
 import Tag from './Tag';
+import { StaticImageData } from 'next/image';
 
 export type CardProps = {
   title: string;
-  img: string;
+  img: StaticImageData;
   links: LinkProps[];
   tags: string[];
 };
@@ -12,7 +14,7 @@ export type CardProps = {
 const Card = ({ title, img, links, tags }: CardProps) => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <img className="h-60 w-full rounded-lg object-cover" src={img} />
+      <Image alt="" className="h-60 w-full rounded-lg object-cover" src={img} />
       <div className="mt-6 flex w-full flex-col">
         <div className="mb-4 flex gap-3">
           {tags.map((tag, index) => (

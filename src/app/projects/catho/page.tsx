@@ -1,23 +1,22 @@
-import Callout from 'components/Callout';
-import CalloutList from 'components/CalloutList';
-import Hero from 'components/Hero';
-import TextBlock from 'components/TextBlock';
-import ZoomImg from 'components/ZoomImg';
-import ImgIntroCa from 'routes/projects/catho/imgs/intro-img.jpg';
-import ImgScenarioCa from 'routes/projects/catho/imgs/scenario-img.jpg';
-import ImgScreensCa from 'routes/projects/catho/imgs/product-screens.jpg';
-import ImgIosCa from 'routes/projects/catho/imgs/ios-catho-img.jpg';
-import BackLink from 'components/BackLink';
-import { createFileRoute } from '@tanstack/react-router';
+import Callout from '@/components/Callout';
+import CalloutList from '@/components/CalloutList';
+import Hero from '@/components/Hero';
+import TextBlock from '@/components/TextBlock';
+import ZoomImg from '@/components/ZoomImg';
+import ImgIntroCa from '@/app/projects/catho/imgs/intro-img.jpg';
+import ImgScenarioCa from '@/app/projects/catho/imgs/scenario-img.jpg';
+import ImgScreensCa from '@/app/projects/catho/imgs/product-screens.jpg';
+import ImgIosCa from '@/app/projects/catho/imgs/ios-catho-img.jpg';
+import BackLink from '@/components/BackLink';
+import Image from 'next/image';
+import type { Metadata } from 'next';
+import routes from '@/routes';
 
-export const Route = createFileRoute('/projects/catho/')({
-  component: Catho,
-  beforeLoad: () => ({
-    title: 'Redesigning a Mobile App Experience',
-  }),
-});
+const metadata: Metadata = {
+  title: routes.projects.catho.title,
+};
 
-function Catho() {
+export default function Catho() {
   return (
     <>
       <Hero
@@ -28,7 +27,7 @@ function Catho() {
 
       {/* Intro Section */}
       <div className=" mb-20 flex w-full flex-col items-center justify-center gap-10 lg:flex-row lg:items-start xl:mb-32 xl:gap-14">
-        <img
+        <Image
           src={ImgIntroCa}
           alt="Image of two phones showing product screens"
           className="w-[320px] rounded-2xl object-cover md:w-[420px] xl:w-[520px]"
@@ -102,7 +101,7 @@ function Catho() {
 
       {/* Flow / Scenario Section */}
       <div className=" mb-20 flex w-full flex-col items-start justify-center gap-10 lg:flex-row xl:mb-32 xl:gap-14">
-        <img
+        <Image
           src={ImgScenarioCa}
           alt="Image of two phones showing product screens"
           className="w-[360px] rounded-2xl object-cover md:w-[460px] xl:w-[560px]"
@@ -144,7 +143,7 @@ function Catho() {
             'As we had already updated the Android app to the new UI, I just had to adapt the interface for the iOS standard, making the delivery of the solution much more effortless. With that, we guarantee the experience and interface for the user would be the same in both apps.',
           ]}
         />
-        <img
+        <Image
           src={ImgIosCa}
           alt="Image of three phones showing product screens"
           className="w-[360px] rounded-2xl object-cover md:w-[460px] xl:w-[560px]"

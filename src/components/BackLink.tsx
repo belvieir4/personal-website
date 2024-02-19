@@ -9,7 +9,7 @@ function BackLink() {
         <p className="mb-8 mt-2 text-center leading-7 text-white">
           If you want to see other projects, click in the link bellow.
         </p>
-        <Link to="/">Go to project list</Link>
+        <Link href="/">Go to project list</Link>
       </div>
     </div>
   );

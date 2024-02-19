@@ -1,15 +1,15 @@
 import classNames from 'classnames';
 import Link from './Link';
-import { LinkProps } from '@tanstack/react-router';
 import Tag from './Tag';
 import AnimatedBlock from './AnimatedBlock';
+import Image, { StaticImageData } from 'next/image';
 
 export type HighlightProps = {
   title: string;
   subtitle: string;
-  img: string;
+  img: StaticImageData;
   reverse?: boolean;
-  to: LinkProps['to'];
+  href: string;
   tags: string[];
   className?: string;
 };
@@ -19,7 +19,7 @@ const Highlight = ({
   subtitle,
   img,
   reverse,
-  to,
+  href,
   tags,
   className,
 }: HighlightProps) => {
@@ -34,7 +34,9 @@ const Highlight = ({
       )}
     >
       <AnimatedBlock direction={reverse ? 'right' : 'left'}>
-        <img
+        <Image
+          priority
+          alt=""
           className="h-72 w-full rounded-2xl object-cover md:h-52 md:w-[328px] lg:h-[320px] lg:w-[520px] xl:h-[400px] xl:w-[624px]"
           src={img}
         />
@@ -50,7 +52,7 @@ const Highlight = ({
           <p className="mb-10 mt-4 text-base font-light leading-7 text-white">
             {subtitle}
           </p>
-          <Link to={to}>View case</Link>
+          <Link href={href}>View case</Link>
         </div>
       </AnimatedBlock>
     </div>
