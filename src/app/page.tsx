@@ -1,23 +1,16 @@
-import Hero from 'components/Hero';
-import Highlight from 'components/Highlight';
-import ThumbEbanx from 'routes/projects/ebanx/imgs/thumb-ebanx.jpg';
-import ThumbCatho from 'routes/projects/catho/imgs/thumb-catho.jpg';
-import Card from 'components/Card';
-import ThumbDigimonList from 'routes/projects/frontprojects/imgs/thumb-digimonlist.jpg';
-import ThumbPersonalWebsite from 'routes/projects/frontprojects/imgs/thumb-personalwebsite.jpg';
-import ThumbListin from 'routes/projects/frontprojects/imgs/thumb-listin.jpg';
-import PersonalPhoto from 'assets/personal-photo.png';
-import { createFileRoute } from '@tanstack/react-router';
-import AnimatedBlock from 'components/AnimatedBlock';
+import Hero from "@/components/Hero";
+import Highlight from "@/components/Highlight";
+import ThumbEbanx from "@/app/projects/ebanx/imgs/thumb-ebanx.jpg";
+import ThumbCatho from "@/app/projects/catho/imgs/thumb-catho.jpg";
+import Card from "@/components/Card";
+import ThumbDigimonList from "@/app/projects/frontprojects/imgs/thumb-digimonlist.jpg";
+import ThumbPersonalWebsite from "@/app/projects/frontprojects/imgs/thumb-personalwebsite.jpg";
+import ThumbListin from "@/app/projects/frontprojects/imgs/thumb-listin.jpg";
+import PersonalPhoto from "@/assets/personal-photo.png";
+import AnimatedBlock from "@/components/AnimatedBlock";
+import Image from "next/image";
 
-export const Route = createFileRoute('/')({
-  component: Home,
-  beforeLoad: () => ({
-    title: '',
-  }),
-});
-
-function Home() {
+export default function Home() {
   return (
     <>
       <Hero
@@ -36,16 +29,16 @@ function Home() {
             img={ThumbEbanx}
             title="Automated Refund Status Flow"
             subtitle="A case on how I improved the user's experience on a Help Center automating the access to information."
-            to="/projects/ebanx"
-            tags={['Product Design', 'Responsive Website']}
+            href="/projects/ebanx"
+            tags={["Product Design", "Responsive Website"]}
             className="md:w-auto"
           />
           <Highlight
             img={ThumbCatho}
             title="Redesigning a Mobile App Experience"
             subtitle="A case on how redesigning the B2C iOS and Android apps improved user feedback and experience."
-            to="/projects/catho"
-            tags={['Product Design', 'Native Mobile App']}
+            href="/projects/catho"
+            tags={["Product Design", "Native Mobile App"]}
             reverse
             className="md:w-auto"
           />
@@ -67,46 +60,46 @@ function Home() {
             img={ThumbListin}
             links={[
               {
-                children: 'Live Preview',
-                href: 'https://listin-img.vercel.app',
-                target: '_blank',
+                children: "Live Preview",
+                href: "https://listin-img.vercel.app",
+                target: "_blank",
               },
               {
-                children: 'View on Github',
-                href: 'https://github.com/belvieir4/list-generator',
-                target: '_blank',
+                children: "View on Github",
+                href: "https://github.com/belvieir4/list-generator",
+                target: "_blank",
               },
             ]}
-            tags={['Front-end Development']}
+            tags={["Front-end Development"]}
           />
           <Card
             title="Personal Website"
             img={ThumbPersonalWebsite}
             links={[
               {
-                children: 'View on Github',
-                href: 'https://github.com/belvieir4/personal-website',
-                target: '_blank',
+                children: "View on Github",
+                href: "https://github.com/belvieir4/personal-website",
+                target: "_blank",
               },
             ]}
-            tags={['Front-end Development']}
+            tags={["Front-end Development"]}
           />
           <Card
             title="The Digimon List"
             img={ThumbDigimonList}
             links={[
               {
-                children: 'Live preview',
-                href: 'https://belvieir4.github.io/digimon-table/',
-                target: '_blank',
+                children: "Live preview",
+                href: "https://belvieir4.github.io/digimon-table/",
+                target: "_blank",
               },
               {
-                children: 'View on Github',
-                href: 'https://github.com/belvieir4/digimon-table',
-                target: '_blank',
+                children: "View on Github",
+                href: "https://github.com/belvieir4/digimon-table",
+                target: "_blank",
               },
             ]}
-            tags={['Front-end Development']}
+            tags={["Front-end Development"]}
           />
         </AnimatedBlock>
       </div>
@@ -114,7 +107,7 @@ function Home() {
       {/* About me section */}
       <div className="flex w-full flex-col items-center px-4">
         <hr className="mb-20 mt-20 w-40 rounded-sm border-2 border-teal-400 lg:mt-32" />
-        <img
+        <Image
           src={PersonalPhoto}
           alt="Photo in black and white of Isabel Vieira"
         />
@@ -126,15 +119,15 @@ function Home() {
             including fintechs, HR systems, banks and gaming.
           </p>
           <p className="mt-6 text-center leading-7 text-white">
-            You can{' '}
+            You can{" "}
             <a
               href="https://www.linkedin.com/in/isabelcvieira/"
               target="_blank"
               className="text-teal-400 hover:underline hover:underline-offset-4"
             >
               reach me on LinkedIn
-            </a>{' '}
-            or{' '}
+            </a>{" "}
+            or{" "}
             <a
               href="mailto:work.isabelvieira@gmail.com"
               target="_blank"

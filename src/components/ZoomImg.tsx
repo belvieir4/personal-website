@@ -1,13 +1,15 @@
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+"use client";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMinus,
   faPlus,
   faRotateBack,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
+import Image, { StaticImageData } from "next/image";
 
 export type ZoomImgProps = {
-  src: string;
+  src: StaticImageData;
   alt: string;
 };
 
@@ -38,7 +40,7 @@ function ZoomImg({ src, alt }: ZoomImgProps) {
               </button>
             </div>
             <TransformComponent>
-              <img
+              <Image
                 src={src}
                 alt={alt}
                 className="w-full rounded-2xl object-cover"

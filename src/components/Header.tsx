@@ -1,31 +1,41 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+"use client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedinIn,
   faMedium,
   faGithub,
-} from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { Link, useMatches } from '@tanstack/react-router';
-import ScrollProgressBar from './ScrollProgressBar';
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import ScrollProgressBar from "./ScrollProgressBar";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { title as ebanx } from "@/app/projects/ebanx/page";
+import { title as catho } from "@/app/projects/catho/page";
 
 function Header() {
-  const matches = useMatches();
-  const currentRoute = [...matches].pop();
+  const pathname = usePathname();
+
+  const titles: Record<string, string> = {
+    "/projects/ebanx": ebanx,
+    "/projects/catho": catho,
+  };
+
+  const title = titles[pathname];
 
   return (
     <div className="fixed left-0 top-0 z-20 w-full">
       <div className="xs:gap-0 xs:flex-row xs:h-16 flex w-full flex-col flex-wrap items-center justify-between gap-4 border-b border-b-gray-700 bg-gray-950 px-6 py-4 xl:px-12">
         <div>
           <Link
-            to="/"
+            href="/"
             className="text-base font-bold text-white hover:text-teal-400"
           >
             Isabel Vieira
           </Link>
-          {currentRoute?.context.title && (
+          {title && (
             <span className="hidden text-base text-white  lg:inline">
-              {' '}
-              / {currentRoute?.context.title}
+              {" "}
+              / {title}
             </span>
           )}
         </div>
@@ -60,7 +70,7 @@ function Header() {
           </a>
         </div>
       </div>
-      {currentRoute?.pathname.includes('project') && <ScrollProgressBar />}
+      {pathname.includes("project") && <ScrollProgressBar />}
     </div>
   );
 }

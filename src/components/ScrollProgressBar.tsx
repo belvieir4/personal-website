@@ -1,4 +1,5 @@
-import { motion, useScroll, useSpring } from 'framer-motion';
+"use client";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 function ScrollProgressBar() {
   const { scrollYProgress } = useScroll();

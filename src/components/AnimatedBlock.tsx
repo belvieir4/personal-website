@@ -1,7 +1,8 @@
-import { motion, Variants } from 'framer-motion';
-import { Children, ReactNode } from 'react';
+"use client";
+import { motion, Variants } from "framer-motion";
+import { Children, ReactNode } from "react";
 
-type Direction = 'left' | 'right' | 'top';
+type Direction = "left" | "right" | "top";
 
 type AnimatedBlockProps = {
   children: ReactNode;
@@ -20,7 +21,7 @@ const variants: Record<Direction, Variants> = {
       x: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         duration: 0.8,
       },
     },
@@ -34,7 +35,7 @@ const variants: Record<Direction, Variants> = {
       x: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         duration: 0.8,
       },
     },
@@ -48,7 +49,7 @@ const variants: Record<Direction, Variants> = {
       y: 0,
       opacity: 1,
       transition: {
-        type: 'spring',
+        type: "spring",
         duration: 0.8,
       },
     },
